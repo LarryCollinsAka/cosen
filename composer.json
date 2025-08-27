@@ -1,0 +1,37 @@
+{
+    "name": "community-connect/backend",
+    "description": "A backend for a community incident reporting system in Cameroon.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ngwa Edwin Chenwi",
+            "email": "youremail@example.com",
+            "name": "Lateh Larry-Collins",
+            "email": "clatehlarry@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "doctrine/dbal": "^3.6",
+        "symfony/yaml": "^6.3",
+        "ramsey/uuid": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/backend/app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "migrate": "php database/migrations-runner.php",
+        "serve": "php -S 0.0.0.0:8080 -t src/backend/public"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
